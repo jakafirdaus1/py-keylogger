@@ -1,7 +1,7 @@
 # KeyLogger with Python (Educational Purposes)
 
 <h2>Description</h2>
-This projects consists of a simple Python sript that lead you to experience a basic threat in cybersecurity. A Python keylogger is a program written in Python designed to monitor and record keystrokes made by a user on a keyboard. It is often used for tracking user activity or debugging purposes but can also be misused for malicious activities such as stealing sensitive information like passwords and personal data.<br/><br/>
+This projects consists of a simple Python script that lead you to experience a basic threat in cybersecurity. A Python keylogger is a program written in Python designed to monitor and record keystrokes made by a user on a keyboard. It is often used for tracking user activity or debugging purposes but can also be misused for malicious activities such as stealing sensitive information like passwords and personal data.<br/><br/>
 
 <b>This is intended strictly for educational or ethical purposes. Do not use it for illegal or malicious activities.</b>
 
@@ -41,16 +41,27 @@ Importing pynput library:  <br/>
 Define keyPressed function:  <br/>
 <img src="https://i.imgur.com/B2mRsli.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<b>key.char: This is the character representation of the key if it's a alphabetic and numerical key (E.g. a,b,c,1,2,3 etc.)</b>
+ </p>
+ 
+- <b>key.char: This is the character representation of the key if it's a alphabetic or numerical key (like a,b,1,2, etc.)</b></br>
+- <b>AttributeError: Some keys (like Shift, CTRL, Delete, etc.) don't have .char attribute. We handle this as "Special Keys" by writing them in a special format (e.g., [Key.space] for the Spacebar.</b>
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p align="center">
+Start the Listener:  <br/>
+<img src="https://i.imgur.com/yUA9KTf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ </p>
+ 
+- <b>keyboard.Listner(on_pressed=keyPressed): Set the listener to call keyPressed function whenever a key is pressed</b>
+- <b>input(): This keeps the program running and waits for the user to press Enter to stop the keylogger.</b>
 <br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p align="center">
+Running the Keylogger:  <br/>
+<img src="https://i.imgur.com/ndU43wt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+Now that the keylogger script is ready, you can run it. Whenever keys pressed, they will be logged in the keyfile.txt file. if special keys like Shift, Enter or Delete pressed, they will be written in a readable format (e.g., [Key.space]).
 
+<h2>Conclusion</h2>
+In this project, we created a simple keylogger that logs all the keys pressed by the user into a text file using the pynput library. Keep in mind, keylogging can be used for good purposes (e.g., creating custom shorcuts, accessibility tools) but should always be used ethically and with permission.
 <!--
  ```diff
 - text in red
